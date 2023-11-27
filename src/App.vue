@@ -16,29 +16,13 @@
 
   <div>
     <img src="./assets/room1.jpg">
-    <h4 @click="modal=true">{{products[0]}}</h4>
+    <h4 @click="modal=true">{{oneroom[0].title}}</h4>
     <p>80만원</p>
-    <button @click="bbippoclick">허위매물신고</button>
-    <span>신고수 :{{ bbippo[0]  }}</span>
-  </div>
-  <div>
-    <img src="./assets/room2.jpg">
-    <h4 @click="modal=true">{{products[1]}}</h4>
-    <p>70만원</p>
-    <button @click="bbippoclick">허위매물신고</button>
-    <span>신고수 :{{ bbippo[1]  }}</span>
-  </div>
-  <div>
-    <img src="./assets/room3.jpg">
-    <h4 @click="modal=true">{{products[2]}}</h4>
-    <p>50만원</p>
-    <button @click="bbippoclick">허위매물신고</button>
-    <span>신고수 :{{ bbippo[2]  }}</span>
   </div>
 </template>
 <script>
 
-
+import data from './assets/data.js'
 
 export default {
   name: 'App',
@@ -48,6 +32,7 @@ export default {
       menuitems: ['home', 'about', 'products'],
       bbippo: [0,0,0],
       modal: false,
+      oneroom:data,
     }
   },
   methods: {
